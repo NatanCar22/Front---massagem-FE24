@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Massagem - 2024</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.6/jquery.inputmask.min.js"></script>  
+    <script>
+
+        window.onload = function() {
+            document.getElementById("re").addEventListener("input", function() {
+                var reInput = this.value;
+                if (reInput.charAt(0) === "0") {
+                    this.value = reInput.slice(1);
+                }
+            });
+
+            document.getElementById("re").addEventListener("input", function() {
+                var reInput = this.value;
+                this.value = reInput.replace(/[^0-9]/g, '');
+            });
+
+            document.getElementById("nomeCompleto").addEventListener("input", function() {
+                var nomeCompletoInput = this.value;
+                this.value = nomeCompletoInput.replace(/[áàãâä]/gi, 'a')
+                                             .replace(/[éèêë]/gi, 'e')
+                                             .replace(/[íìîï]/gi, 'i')
+                                             .replace(/[óòõôö]/gi, 'o')
+                                             .replace(/[úùûü]/gi, 'u')
+                                             .replace(/[ç]/gi, 'c')
+                                             .toUpperCase();
+            });
+
+            document.querySelector("form").addEventListener("submit", function(event){
+                event.preventDefault();
+                alert("Formulário enviado com sucesso");
+
+            });
+  
+        };
+
+        const getData = () => {
+            const nomecompleto = document.getElementById("nomeCompleto").value
+            alert(nomecompleto)
+            
+            const unidade = document.getElementById("unidade").value
+            alert(unidade)
+
+            const re = document.getElementById("re").value
+            alert(re)
+
+            const eo = document.getElementById("eo").value
+            alert(eo)
+
+            const horario = document.getElementById("horario").value
+            alert(horario)
+    }
+        
+    </script>
+</head>
+<body>
+
+    <h1>Feira do Empreendedor 2024</h1>
+    <h2>Controle de Massagem</h2>
+
+    <form>
+        <label for="nomeCompleto">Nome completo:</label>
+        <input type="text" id="nomeCompleto" name="nomeCompleto" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite seu nome:">
+
+        <label for="unidade">Unidade/ER:</label>
+        <select name="unidade" id="unidade">
+            <option value="" disabled selected hidden>Informe sua Unidade/ER:</option>
+            <option value="Presidência">Presidência</option>
+            <option value="Superintendência">Superintendência</option>
+            <option value="Diretoria Técnica">Diretoria Técnica</option>
+            <option value="Diretoria de Administração e Finanças">Diretoria de Administração e Finanças</option>
+            <option value="Secretaria do CDE">Secretaria do CDE</option>
+            <option value="Unidade de Ouvidoria">Unidade de Ouvidoria</option>
+            <option value="Auditoria">Auditoria</option>
+            <option value="Unidade Economia Criativa e Startups">Unidade Economia Criativa e Startups</option>
+            <option value="Unidade de Compliance e Proteção de Dados">Unidade de Compliance e Proteção de Dados</option>
+            <option value="Escola Superior de Empreendedorismo SEBRAE SP">Escola Superior de Empreendedorismo SEBRAE SP</option>
+            <option value="Unidade Projetos e Obras">Unidade Projetos e Obras</option>
+            <option value="Unidade Administracao">Unidade Administração</option>
+            <option value="Unidade Cultura Empreendedora">Unidade Cultura Empreendedora</option>
+            <option value="Unidade de Atendimento ao Cliente">Unidade de Atendimento ao Cliente</option>
+            <option value="Unidade Territorial e Setorial">Unidade Territorial e Setorial</option>
+            <option value="Unidade de Acesso a Mercado e Serviços Financeiros">Unidade de Acesso a Mercado e Serviços Financeiros</option>
+            <option value="Unidade Finanças e Controladoria">Unidade Finanças e Controladoria</option>
+            <option value="Unidade Gestão de Pessoas">Unidade Gestão de Pessoas</option>
+            <option value="Unidade Gestao de Solucoes e Transformacao Digital">Unidade Gestão de Soluções e Transformação Digital</option>
+            <option value="Unidade Gestão Estratégica">Unidade Gestão Estratégica</option>
+            <option value="Unidade Infraestrutura da Informação">Unidade Infraestrutura da Informação</option>
+            <option value="Unidade Jurídica">Unidade Jurídica</option>
+            <option value="Unidade Marketing e comunicacao">Unidade Marketing e Comunicação</option>
+            <option value="Unidade Políticas Públicas e Relações Governamentais">Unidade Políticas Públicas e Relações Governamentais</option>
+            <option value="Unidade Relacionamento com Cliente">Unidade Relacionamento com Cliente</option>
+            <option value="Unidade Suprimentos">Unidade Suprimentos</option>
+            <option value="ER Alto Tietê">ER Alto Tietê</option>
+            <option value="ER Araçatuba">ER Araçatuba</option>
+            <option value="ER Araraquara">ER Araraquara</option>
+            <option value="ER Baixada Santista">ER Baixada Santista</option>
+            <option value="ER Barretos">ER Barretos</option>
+            <option value="ER Bauru">ER Bauru</option>
+            <option value="ER Botucatu">ER Botucatu</option>
+            <option value="ER Campinas">ER Campinas</option>
+            <option value="ER Capital Centro">ER Capital Centro</option>
+            <option value="ER Capital Leste I">ER Capital Leste I</option>
+            <option value="ER Capital Leste II">ER Capital Leste II</option>
+            <option value="ER Capital Norte">ER Capital Norte</option>
+            <option value="ER Capital Oeste">ER Capital Oeste</option>
+            <option value="ER Capital Sul">ER Capital Sul</option>
+            <option value="ER Franca">ER Franca</option>
+            <option value="ER Grande ABC">ER Grande ABC</option>
+            <option value="ER Guaratinguetá">ER Guaratinguetá</option>
+            <option value="ER Guarulhos">ER Guarulhos</option>
+            <option value="ER Jundiaí">ER Jundiaí</option>
+            <option value="ER Marília">ER Marília</option>
+            <option value="ER Osasco">ER Osasco</option>
+            <option value="ER Ourinhos">ER Ourinhos</option>
+            <option value="ER Piracicaba">ER Piracicaba</option>
+            <option value="ER Presidente Prudente">ER Presidente Prudente</option>
+            <option value="ER Ribeirão Preto">ER Ribeirão Preto</option>
+            <option value="ER São Carlos">ER São Carlos</option>
+            <option value="ER São João da Boa Vista">ER São João da Boa Vista</option>
+            <option value="ER São José do Rio Preto">ER São José do Rio Preto</option>
+            <option value="ER São José dos Campos">ER São José dos Campos</option>
+            <option value="ER Sorocaba">ER Sorocaba</option>
+            <option value="ER Sudoeste Paulista">ER Sudoeste Paulista</option>
+            <option value="ER Vale do Ribeira">ER Vale do Ribeira</option>
+            <option value="ER Votuporanga">ER Votuporanga</option>
+        </select>
+
+        <label for="re">RE (sem os zeros iniciais):</label>
+        <input type="text" id="re" name="re" required class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Digite seu RE:">
+
+        <label for="eo">EO:</label>
+        <select name="eo" id="eo" required>
+
+            <option value="" disabled selected hidden>Informe seu EO:</option>
+            <option value="Funcionário">Funcionário</option>
+            <option value="Estagiário">Estagiário</option>
+            <option value="Temporário">Temporário</option>
+
+        </select>
+
+        <label for="tipoDeMassagem">Tipo de Massagem:</label>
+        <select name="tipoDeMassagem" id="tipoDeMassagem" required>
+
+            <option value="" disabled selected hidden>Inform o tipo de massagem:</option>
+            <option value="Funcionário">Quick Massage</option>
+            <option value="Estagiário">Reflexologia</option>
+
+        </select>
+
+        <label for="horario">Horário:</label>
+        <select name="horario" id="horario">
+            <option value="" disabled selected hidden>Escolha seu horário:</option>
+            <option value="09:00">09:00</option>
+            <option value="09:20">09:20</option>
+            <option value="09:40">09:40</option>
+            <option value="10:00">10:00</option>
+            <option value="10:20">10:20</option>
+            <option value="10:40">10:40</option>  
+            <option value="11:00">11:00</option>  <!--inicio do almoço de 5 massagistas -->
+            <option value="11:20">11:20</option>
+            <option value="11:40">11:40</option>
+            <option value="12:00">12:00</option>  <!--fim do almoço -->
+            <option value="12:20">12:20</option>
+            <option value="12:40">12:40</option>
+            <option value="13:00">13:00</option>
+            <option value="13:20">13:20</option>
+            <option value="13:40">13:40</option>
+            <option value="14:00">14:00</option>  <!--inicio do 2° almoço de 5 massagistas -->
+            <option value="14:20">14:20</option>
+            <option value="14:40">14:40</option>
+            <option value="15:00">15:00</option>  <!--fim do almoço -->
+            <option value="15:20">15:20</option>
+            <option value="15:40">15:40</option>
+            <option value="16:00">16:00</option>
+            <option value="16:20">16:20</option>
+            <option value="16:40">16:40</option>
+            <option value="17:00">17:00</option>
+            <option value="17:20">17:20</option>
+            <option value="17:40">17:40</option>
+
+
+        </select>
+        
+        <input type="submit" onclick="getData()" value="ENVIAR">
+    </form>
+
+    <img src="logo-fe24-pink.png" alt="teste">
+
+</body>
+</html>

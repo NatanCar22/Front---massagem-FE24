@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 108vh;
+    background-color: #510677;
+}
+
+h1 {
+    text-align: center;
+    padding: 0%;
+    font-family: 'Helvetica', Arial, sans-serif; /* Altera a fonte conforme desejado */
+    font-size: 35px; /* Altera o tamanho da fonte */
+    color: #f8f8f8; /* Altera a cor do titulo */
+    height: 20px;
+    margin-block: 30px;
+}
+
+h2 {
+    text-align: center;
+    padding: 0%;
+    font-family: 'Helvetica', Arial, sans-serif; /* Altere a fonte conforme desejado */
+    font-size: 35px; /* Altere o tamanho da fonte */
+    color: #f8f8f8; /* Altere a cor do titulo */
+    margin-block: 60px;  
+    margin-bottom: 10px;
+}
+
+form {
+    width: 350px; /*altera a largura do formulário*/
+    margin: 0 auto 100px; /* Adiciona margem inferior para separar do título */
+    padding: 23px; /*Fundo do formulário*/
+    padding-right: 35px;
+    background-color: #e3e3e3;
+    border-radius: 25px;
+    box-shadow: 0 0 100px rgb(193, 5, 121);
+    height: auto;
+    border: 2px solid #991e8f; /* Adiciona a borda ao redor do formulário */
+
+}
+
+label {
+    color: #5d0d83;
+    display: block;
+    padding: 0%;
+    font-size: 19px;
+    font-family:'Helvetica', 'Arial Narrow', Arial, sans-serif;
+    display: block; /* Garante que cada label esteja em uma linha separada */
+    margin-bottom: 8px; /* Espaço entre cada label e o campo correspondente */
+}
+input:not([type = "submit"]) {
+    width: calc(100% - 10px);
+    padding: 8px;
+    margin-bottom: 18px;
+    border: 1px solid #656161f0;
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 100%;
+}
+
+/* Botão ( ENVIAR ) */
+input[type="submit"] {
+    background-color: #5d0d83; /* Cor de fundo do botão */
+    color: rgb(255, 255, 255);
+    padding: 10px 0px; /*Centraliza o ENVIAR e modifica a altura do botão*/
+    margin-top: 12px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.5s ease; /* Transição */
+    width: 102%; /* Largura do botão */
+}
+
+input[type="submit"]:hover {
+    background-color: #d20985; /* Cor de fundo do botão ao passar o cursor */
+}
+
+select {
+    width: 102%;
+    height: 35px;
+    margin-bottom: 18px;
+    background-color: #ffffff; /*Cor da lista suspensa */
+    border-radius: 8px;
+}
+
+#horario:not(.placeholder) {
+    color: rgba(0, 0, 0, 0.616); /* cor das opções */
+    font-size: 100%;
+}
+#eo:not(.placeholder) {
+    color: rgba(0, 0, 0, 0.616);
+    font-size: 100%;
+}
+
+#tipoDeMassagem:not(.placeholder) {
+    color: rgba(0, 0, 0, 0.616);
+    font-size: 100%;
+}
+#unidade:not(.placeholder) {
+    color: rgba(0, 0, 0, 0.616);
+    font-size: 100%;
+}
+
+select option {
+    color: #000000; /* Cor do texto das opções na lista suspensa */
+}
+
+img{
+    max-width: 350px;
+    margin-right: 55px;
+    margin-left: 40px;
+    margin-top: -70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
