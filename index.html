@@ -12,7 +12,7 @@
     <script>
 
         window.onload = function () {
-            document.getElementById('tipoDeMassagem').addEventListener('change', function () {
+            /* document.getElementById('tipoDeMassagem').addEventListener('change', function () {
                 const typeMassage = document.getElementById('tipoDeMassagem').value
                 // reflexologia é horario B
                 if (typeMassage === 'quickMassage') {
@@ -23,7 +23,7 @@
                     document.getElementById('horarioB').style.display = 'block'; // Mostra o select 'horarioB'
                 }
 
-            })
+            }) */
             
             document.getElementById("re").addEventListener("input", function () {
                 var reInput = this.value;
@@ -203,46 +203,6 @@
                 <label for="horario">Horário:</label>
         
                 <select name="horario" id="horario">
-                    <option value="" disabled selected hidden>Escolha seu horário:</option>
-                    <option value="09:00">09:00</option>
-                    <option value="09:15">09:15</option>
-                    <option value="09:30">09:30</option>
-                    <option value="09:45">09:45</option>
-                    <option value="10:00">10:00</option>
-                    <option value="10:15">10:15</option>
-                    <option value="10:30">10:30</option>
-                    <option value="10:45">10:45</option>
-                    <option value="11:00">11:00</option>
-                    <option value="11:15">11:15</option>
-                    <option value="11:30">11:30</option>
-                    <option value="11:45">11:45</option>
-                    <option value="12:00">12:00</option>
-                    <option value="12:15">12:15</option>
-                    <option value="12:30">12:30</option>
-                    <option value="12:45">12:45</option>
-                    <option value="13:00">13:00</option>
-                    <option value="13:15">13:15</option>
-                    <option value="13:30">13:30</option>
-                    <option value="13:45">13:45</option>
-                    <option value="14:00">14:00</option>
-                    <option value="15:00">15:00</option>
-                    <option value="15:15">15:15</option>
-                    <option value="15:30">15:30</option>
-                    <option value="15:45">15:45</option>
-                    <option value="16:00">16:00</option>
-                    <option value="16:15">16:15</option>
-                    <option value="16:30">16:30</option>
-                    <option value="16:45">16:45</option>
-                    <option value="17:00">17:00</option>
-                    <option value="17:15">17:15</option>
-                    <option value="17:30">17:30</option>
-                    <option value="17:45">17:45</option>
-                    <option value="18:00">18:00</option>
-                    <option value="18:15">18:15</option>
-                    <option value="18:30">18:30</option>
-                    <option value="18:45">18:45</option>
-                </select>
-                <select  style="display: none;" name="horarioB" id="horarioB">
                     <option value="" disabled selected hidden>Escolha seu horário:</option>
                     <option value="09:00">09:00</option>
                     <option value="09:15">09:15</option>
